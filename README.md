@@ -1,8 +1,4 @@
 # infonation
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+A new Flutter project. And it simply provides a platform for news.
+and it uses the magical flutter for building the beatiful design of app.
