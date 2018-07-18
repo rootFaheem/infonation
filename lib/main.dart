@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Image.asset('assets/tyre1.jpg'),
-                    Text('this is Mr. Tyre. He lives in Kota')
+                    Text('This is asjd. ')
                   ],
                 ),
               ),
