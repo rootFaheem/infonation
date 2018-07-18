@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:infonation/pages.dart';
 
 void main() => runApp(new MyApp());
 
@@ -43,23 +44,58 @@ class HomePage extends StatelessWidget{
             new ListTile(
               title: new Text("PROFILE"),
               trailing: new Icon(Icons.home),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new NewPage("PROFILE")
+                ));
+              }
             ),
             new ListTile(
               title: new Text("SETTINGS"),
               trailing: new Icon(Icons.settings),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new NewPage("SETTINGS")
+                ));
+              }
             ),
             new ListTile(
               title: new Text("RATE THIS APP"),
               trailing: new Icon(Icons.rate_review),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new NewPage("RATE THIS APP")
+                ));
+              }
             ),
             new ListTile(
               title: new Text("FEEDBACK"),
               trailing: new Icon(Icons.feedback),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new NewPage("FEEDBACK")
+                ));
+              }
             ),
             new Divider(),
             new ListTile(
               title: new Text("VERSION"),
               trailing: new Icon(Icons.verified_user),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new NewPage("VERSION")
+                ));
+              }
             ),
             new ListTile(
               title: new Text("CLOSE"),
