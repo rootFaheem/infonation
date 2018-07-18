@@ -1,22 +1,20 @@
 #Internal package file, do not edit.
-#Tue Jul 17 13:41:45 IST 2018
+#Wed Jul 18 15:56:09 IST 2018
 4.path=flutter_assets/platform.dill
-13.baseType=DIRECTORY
 8.set=ASSET
-6.path=flutter_assets/assets/tyre1.jpg
+6.path=flutter_assets/kernel_blob.bin
 0.baseType=DIRECTORY
-10.path=flutter_assets/isolate_snapshot_data
+10.path=flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 5.baseType=DIRECTORY
 1.base=/home/f/infonation/build/app/intermediates/assets/debug
-8.path=flutter_assets/vm_snapshot_data
-12.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
+8.path=flutter_assets/LICENSE
+12.path=flutter_assets/AssetManifest.json
 3.base=/home/f/infonation/build/app/intermediates/transforms/mergeJniLibs/debug/0
 4.set=ASSET
 5.base=/home/f/infonation/build/app/intermediates/transforms/mergeJniLibs/debug/0
 7.base=/home/f/infonation/build/app/intermediates/assets/debug
 11.base=/home/f/infonation/build/app/intermediates/assets/debug
 9.base=/home/f/infonation/build/app/intermediates/assets/debug
-13.base=/home/f/infonation/build/app/intermediates/assets/debug
 1.baseType=DIRECTORY
 11.set=ASSET
 0.set=DEX
@@ -31,24 +29,22 @@
 10.set=ASSET
 5.path=lib/x86/libflutter.so
 0.base=/home/f/infonation/build/app/intermediates/transforms/dexMerger/debug/0
-7.path=flutter_assets/kernel_blob.bin
-11.path=flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
-9.path=flutter_assets/LICENSE
+7.path=flutter_assets/vm_snapshot_data
+11.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
+9.path=flutter_assets/isolate_snapshot_data
 6.set=ASSET
 2.base=/home/f/infonation/build/app/intermediates/transforms/mergeJniLibs/debug/0
-13.path=flutter_assets/AssetManifest.json
 11.baseType=DIRECTORY
 4.base=/home/f/infonation/build/app/intermediates/assets/debug
 3.baseType=DIRECTORY
 6.base=/home/f/infonation/build/app/intermediates/assets/debug
 10.base=/home/f/infonation/build/app/intermediates/assets/debug
-13.set=ASSET
 8.base=/home/f/infonation/build/app/intermediates/assets/debug
 2.set=NATIVE_RESOURCE
 8.baseType=DIRECTORY
 12.base=/home/f/infonation/build/app/intermediates/assets/debug
 9.set=ASSET
-count=14
+count=13
 12.baseType=DIRECTORY
 4.baseType=DIRECTORY
 5.set=NATIVE_RESOURCE
