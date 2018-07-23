@@ -2,14 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:infonation/pages.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(new MyApp(
+      theme: 
+          ThemeData(primaryColor: Colors.red, accentColor: Colors.yellowAccent),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+      ));
 
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return new MaterialApp(
       theme: new ThemeData(
-        primarySwatch: Colors.red
+        primarySwatch: Colors.red,
+        brightness: Brightness.light,
+
       ),
       home: new HomePage(),
     );
@@ -110,6 +117,20 @@ class HomePage extends StatelessWidget{
           child: new Text("Home Page"),
         ),
       ),
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget{
+  @override
+  _SplashScreenState createState() => new _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen>{
+  @override
+  Widget build(BuildContext contex){
+    return new Scaffold(
+      body: ,
     );
   }
 }
