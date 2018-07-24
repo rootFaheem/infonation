@@ -1,31 +1,32 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:infonation/pages.dart';
 
-void main() => runApp(new MyApp(
-      theme: 
+void main() => runApp(new MaterialApp(
+      theme:
           ThemeData(primaryColor: Colors.red, accentColor: Colors.yellowAccent),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-      ));
+    ));
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return new MaterialApp(
       theme: new ThemeData(
         primarySwatch: Colors.red,
-        brightness: Brightness.dark,
-
+        brightness: Brightness.light,
       ),
       home: new HomePage(),
     );
   }
-} 
+}
 
-class HomePage extends StatelessWidget{
+class HomePage extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('infonation'),
@@ -43,67 +44,55 @@ class HomePage extends StatelessWidget{
               ),
               otherAccountsPictures: <Widget>[
                 new CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: new Text("A")
-                )
+                    backgroundColor: Colors.white, child: new Text("A"))
               ],
             ),
             new ListTile(
-              title: new Text("PROFILE"),
-              trailing: new Icon(Icons.home),
-              onTap: (){
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  new NewPage("PROFILE")
-                ));
-              }
-            ),
+                title: new Text("PROFILE"),
+                trailing: new Icon(Icons.home),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new NewPage("PROFILE")));
+                }),
             new ListTile(
-              title: new Text("SETTINGS"),
-              trailing: new Icon(Icons.settings),
-              onTap: (){
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  new NewPage("SETTINGS")
-                ));
-              }
-            ),
+                title: new Text("SETTINGS"),
+                trailing: new Icon(Icons.settings),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new NewPage("SETTINGS")));
+                }),
             new ListTile(
-              title: new Text("RATE THIS APP"),
-              trailing: new Icon(Icons.rate_review),
-              onTap: (){
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  new NewPage("RATE THIS APP")
-                ));
-              }
-            ),
+                title: new Text("RATE THIS APP"),
+                trailing: new Icon(Icons.rate_review),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new NewPage("RATE THIS APP")));
+                }),
             new ListTile(
-              title: new Text("FEEDBACK"),
-              trailing: new Icon(Icons.feedback),
-              onTap: (){
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  new NewPage("FEEDBACK")
-                ));
-              }
-            ),
+                title: new Text("FEEDBACK"),
+                trailing: new Icon(Icons.feedback),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new NewPage("FEEDBACK")));
+                }),
             new Divider(),
             new ListTile(
-              title: new Text("VERSION"),
-              trailing: new Icon(Icons.verified_user),
-              onTap: (){
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  new NewPage("VERSION")
-                ));
-              }
-            ),
+                title: new Text("VERSION"),
+                trailing: new Icon(Icons.verified_user),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new NewPage("VERSION")));
+                }),
             new ListTile(
               title: new Text("CLOSE"),
               trailing: new Icon(Icons.close),
@@ -121,16 +110,82 @@ class HomePage extends StatelessWidget{
   }
 }
 
-class SplashScreen extends StatefulWidget{
+class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => new _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>{
+class _SplashScreenState extends State<SplashScreen> {
   @override
-  Widget build(BuildContext contex){
+    void initState(){
+      super.initState();
+      Timer(Duration(seconds: 5), () => runApp(new MyApp()
+      )
+    );
+  }
+
+  Widget build(BuildContext context) {
     return new Scaffold(
-      body: ,
+      body: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(color: Colors.redAccent),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 50.0,
+                        child: Icon(
+                          Icons.new_releases,
+                          color: Colors.greenAccent,
+                          size: 50.0,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                      ),
+                      Text(
+                        "Infonation",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircularProgressIndicator(),
+                    Padding(padding: EdgeInsets.only(top: 20.0),
+                    ),
+                    Text("Welcome to infonation",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.bold
+                    ),),
+                    ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jul 18 22:36:47 IST 2018
+#Wed Jul 25 01:35:19 IST 2018
 4.path=flutter_assets/platform.dill
 8.set=ASSET
 6.path=flutter_assets/kernel_blob.bin
