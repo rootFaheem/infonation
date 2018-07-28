@@ -1,4 +1,4 @@
-#Wed Jul 25 01:35:17 IST 2018
+#Sat Jul 28 18:05:34 IST 2018
 base.0=/home/f/infonation/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
